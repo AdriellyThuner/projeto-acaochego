@@ -1,0 +1,154 @@
+/* ==============================
+    CONFIGURAÇÕES GERAIS
+================================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ==============================
+    TOPO E LOGO
+================================= */
+.top-bar {
+    background: #fff; /* Fundo branco */
+    width: 100%;
+    position: relative; 
+}
+
+.container {
+    padding: 10px 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    max-height: 80px;
+}
+
+/* ==============================
+    NOME E SLOGAN (Centro)
+================================= */
+.name-slogan {
+    text-align: center;
+    color: #4f8fa7; /* Cor azul-clara para o nome/slogan */
+}
+
+.name-slogan .name {
+    /* Mantenha a fonte se estiver no seu projeto */
+    /* font-family: "vaseline-extra"; */ 
+    font-size: 40px;
+    margin: 5px auto;
+}
+
+.name-slogan .slogan {
+    font-size: 12px;
+}
+
+/* ==============================
+    COLUNA DA DIREITA (Social + Hambúrguer)
+================================= */
+.right-column-stack {
+    display: flex;
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: flex-end; /* Alinha o conteúdo à direita */
+    gap: 10px; /* Espaço entre a linha social e o botão hambúrguer */
+}
+
+/* 1. Estilo dos Ícones Sociais (Linha de Cima) */
+.social {
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.social a i {
+    color: rgb(0, 119, 255);
+    transition:  0.2s ease;
+}
+
+.social a:hover i {
+    opacity: 0.8;
+}
+
+/* 2. Estilo do botão de toggle (Linha de Baixo) */
+.menu-toggle {
+    display: block; 
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: #4f8fa7; /* Cor azul-clara/água para o ícone de hambúrguer */
+    cursor: pointer;
+    padding: 0;
+}
+
+/* ==============================
+    MENU DE HAMBÚRGUER (Lista Suspensa)
+================================= */
+.menu {
+    /* Posiciona o menu suspenso em relação ao topo da página */
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    z-index: 90; 
+}
+
+/* 🍔 Estilo da lista (oculta por padrão) */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    /* Posicionamento do menu */
+    position: absolute;
+    right: 20px; 
+    top: 120px; /* Desce o menu abaixo da Coluna da Direita */
+    background-color: #4f8fa7; /* Fundo azul-claro do menu */
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-direction: column; 
+  
+
+    /* Efeitos de Transição e Ocultação */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* 🍔 Mostrar o menu quando a classe 'show' é ativada pelo JS */
+.menu ul.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Remove borda do último item */
+.menu ul li:last-child {
+    border-bottom: none;
+}
+
+/* ==============================
+    LINHA DIVISÓRIA
+================================= */
+.line {
+    border-bottom: 7px solid rgb(0, 119, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
