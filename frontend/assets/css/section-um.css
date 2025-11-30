@@ -311,6 +311,39 @@ body {
 }
 
 /* ==============================
+    Animais para adoção
+================================= */
+
+.animais-adocao {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 40px;
+  justify-items: center; 
+  align-items: center; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 20px;
+}
+
+.animais-adocao h1{
+  text-align: center;
+  font-family: "Montserrat-bold";
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  grid-column: 1 / -1; 
+}
+
+.animais-adocao img {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+
+
+/* ==============================
     NOSSOS NÚMEROS
 ================================= */
 .img-nossos-numeros {
@@ -494,16 +527,27 @@ footer {
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1700px;
   margin: 0 auto;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 200px;
 }
 
 .footer-column {
   flex: 1;
-  min-width: 200px;
+}
+
+.footer-column .sociais-footer {
+  text-align: unset;
+  font-size: 30px;
+  gap: 20px;
+
+}
+
+
+.footer-column .logo {
+  max-width: 150px;
+
 }
 
 .footer-column h3 {
@@ -511,10 +555,18 @@ footer {
   margin-bottom: 10px;
 }
 
-.footer-column ul {
+.footer-column li{
   list-style: none;
-  padding: 0;
+}
+
+.footer-column ul {
+  list-style: none; 
+  padding: 0;   
   margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 6px;
+  
 }
 
 .footer-column ul li {
@@ -522,9 +574,12 @@ footer {
   margin-bottom: 8px;
 }
 
-.sociais-footer a {
-  margin-right: 10px;
-  color: #fff;
+footer a {
   text-decoration: none;
-  font-size: 1.5rem;
+  color: #fff; 
 }
+
+footer a:hover {
+  text-decoration: underline;
+}
+
